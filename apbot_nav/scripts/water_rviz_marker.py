@@ -12,7 +12,6 @@ import tf2_geometry_msgs
 from tf2_sensor_msgs.tf2_sensor_msgs import do_transform_cloud
 import tf
 import threading
-import pcl
 
 from uuv_plume_model import Plume
 from uuv_plume_msgs.srv import *

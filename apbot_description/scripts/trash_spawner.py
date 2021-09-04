@@ -18,7 +18,7 @@ if __name__ == '__main__':
     delete_model = rospy.ServiceProxy("gazebo/delete_model", DeleteModel)
     spawn_model_prox = rospy.ServiceProxy('gazebo/spawn_sdf_model', SpawnModel)
 
-    numCans = input("Enter the number of cans:\n")
+    numCans = input("Enter the number of cans: (Max of 5)\n")
     while True:
         try:
             numCans = int(numCans)
@@ -26,7 +26,7 @@ if __name__ == '__main__':
         except:
             print("Invald input\n")
 
-    numCups = input("Enter the number of cups:\n")
+    numCups = input("Enter the number of cups: (Max of 5)\n")
     while True:
         try:
             numCups = int(numCups)

@@ -196,13 +196,13 @@ class MarkerSpawner:
                         break
                     except:
                         continue
-                if p_wrt_odom.pose.position.z < 1.2 and p_wrt_odom.pose.position.z > 0.85:
+                if p_wrt_odom.pose.position.z < 1.1 and p_wrt_odom.pose.position.z > 1:
                     print("Spawn!!")
                     # x_noise = np.random.normal(0, 0.03, 50)
                     # y_noise = np.random.normal(0, 0.03, 50)
                     # for i in range(50):
                     #     self.spawn_marker(p_wrt_odom.pose.position.x + x_noise[i],p_wrt_odom.pose.position.y + y_noise[i] ,1)
-                    self.spawn_marker(p_wrt_odom.pose.position.x,p_wrt_odom.pose.position.y,1.01)
+                    self.spawn_marker(p_wrt_odom.pose.position.x,p_wrt_odom.pose.position.y,1.05)
                     self.pub_rviz_marker.publish(self.marker2)
                     break
 
@@ -287,6 +287,3 @@ class MarkerSpawner:
         vel = -0.1
         hor_ang = 99.0
         velocity_resp = veclocity_service( vel, hor_ang)
-
-
-
